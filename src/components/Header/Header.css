@@ -1,0 +1,294 @@
+
+.header {
+  padding: 0px 0;
+  background-color: #e9f3ee;
+}
+
+.center-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.text-container {
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.title-green {
+  color:  rgb(5 153 72);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.btn-green {
+  background-color:  rgb(5 153 72);
+  color: white;
+}
+
+.btn-outline {
+  border: 4px solid  rgb(5 153 72);
+  color:  rgb(5 153 72);
+}
+
+.footer-container {
+  opacity: 1;
+  transition: opacity 1s ease-out 0.2s;
+  text-align: center;
+}
+
+.bounce-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-container {
+  display: flex; /* Flex layout */
+  justify-content: space-between; /* Space out text and images */
+  align-items: center; /* Center align items */
+  gap: 2rem; /* Add spacing between text and images */
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden; /* Prevent images from overflowing */
+  width: 50%; /* Set width for the image section */
+}
+
+.swiper-wrapper {
+  display: flex; /* Align images in a row */
+  transition: transform 0.5s ease; /* Smooth transition for GSAP */
+}
+
+.swiper-slide {
+  min-width: 100%; /* Ensure slides take full container width */
+}
+
+.image-wrapper img {
+  width: 100%;
+  object-fit: cover; /* Ensure proper scaling of images */
+}
+/* Main Section */
+.incubation-section {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 6rem 20%;
+gap: 16rem;
+background-color: #f5f5f5; /* Light background like Anna Incubator */
+}
+
+/* Text Content */
+.text-content {
+flex: 1;
+max-width: 800px;
+font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+.heading {
+font-size: 4rem;
+font-weight: bold;
+margin: 0.5rem 0;
+color: #000;
+font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+.highlight {
+color: rgb(5 153 72); /* Green color for 'Impact' */
+}
+
+.description {
+font-size: 1.25rem;
+color: #555;
+margin: 1rem 0 2rem;
+}
+
+.button-group {
+display: flex;
+gap: 1rem;
+}
+
+.btn {
+
+font-size: 1rem;
+
+text-decoration: none;
+transition: all 0.3s ease;
+}
+
+
+
+.btn-green {
+background-color: rgb(5 153 72);
+color: #fff;
+border: none;
+}
+
+.btn-green:hover {
+background-color:  rgb(5 153 72);
+}
+
+.btn-outline {
+background-color: transparent;
+color:  rgb(5 153 72);
+border: 2px solid rgb(5 153 72);
+}
+
+.btn-outline:hover {
+background-color:  rgb(5 153 72);
+color: #fff;
+}
+
+/* Image Gallery Container */
+.image-gallery {
+position: relative;
+width: 400px; /* Container width */
+height: 250px; /* Container height */
+overflow: hidden; /* Ensure only one image is visible at a time */
+
+}
+
+/* Wrapper for Images */
+.images-wrapper {
+display: flex;
+position: relative;
+width: 100%;
+height: 100%;
+}
+
+/* Base Image Styling */
+.gallery-image {
+position: absolute;
+top: 0;
+
+height: 230px;
+object-fit: cover; /* Maintain aspect ratio */
+transition: transform 1s ease, opacity 1s ease; /* Smooth transitions */
+opacity: 0; /* Default hidden */
+}
+
+/* Current Image */
+.visible {
+opacity: 1; /* Make the current image visible */
+transform: translateX(0); /* Keep it centered */
+}
+
+/* Move Left */
+.slide-left {
+transform: translateX(-100%); /* Slide out to the left */
+/* opacity: 0;  */
+}
+
+/* Hidden Image */
+.hidden {
+transform: translateX(100%); /* Start from the right */
+opacity: 0; /* Invisible */
+}
+
+/* Last Image Stays in Place */
+.stop {
+transform: translateX(0); /* Stay centered */
+opacity: 1; /* Fully visible */
+}
+
+
+
+
+
+.horizontal-scroll-container {
+display: flex;
+overflow-x: auto;
+width: 100vw;
+scroll-snap-type: x mandatory; /* Ensures that the scrolling snaps to sections */
+}
+
+.scroll-content {
+display: flex;
+width: 100%; /* Ensures the content stretches across the full width */
+}
+
+.section {
+flex-shrink: 0; /* Prevents the section from shrinking */
+width: 100vw; /* Each section takes the full width of the viewport */
+height: 100vh; /* Each section takes the full height of the viewport */
+display: flex;
+justify-content: center;
+align-items: center;
+scroll-snap-align: start; /* Snaps the section to the left of the container */
+}
+
+
+html, body {
+overflow-x: hidden;  /* Disable horizontal scrolling initially */
+
+width: 100%;
+height: 100%;
+background-color: #000;
+}
+
+/* Loader Bar */
+.loader {
+  width: 10px;
+  height: 5px;
+  background-color: lightgray;
+  margin-left: 5px;
+  margin-top: 245px;
+  border-radius: 5px;
+  transition: background-color 0.5s ease-in-out, width 0.5s ease-in-out;}
+ 
+/* Loader active animation */
+.loader.active {
+  background-color: green;
+  animation: expand-shrink 5s ease-in-out infinite;
+}
+/* Stop shrinking for the last loader */
+.loader.last-active {
+  background-color: green;
+  animation: expand-final 1s ease-in-out forwards;
+}
+
+/* Normal expand and shrink for all loaders */
+@keyframes expand-shrink {
+  0% {
+    width: 10px;
+  }
+  50% {
+    width: 30px;
+  }
+  100% {
+    width: 60px;
+  }
+}
+
+/* Expand and stay at max width for the last image */
+@keyframes expand-final {
+  0% {
+    width: 10px;
+  }
+  100% {
+    width: 60px;
+  }
+}
